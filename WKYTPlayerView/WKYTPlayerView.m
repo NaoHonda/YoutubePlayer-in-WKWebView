@@ -1018,8 +1018,8 @@ NSString static *const kWKYTPlayerSyndicationRegexPattern = @"^https://tpc.googl
     static NSBundle* frameworkBundle = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        NSString* mainBundlePath = [[NSBundle bundleForClass:[self class]] resourcePath];
-        NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"WKYTPlayerView.bundle"];
+        NSString* mainBundlePath = [[NSBundle bundleForClass:[WKYTPlayerView class]] resourcePath];
+                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"WKYTPlayerView.bundle"];
         frameworkBundle = [NSBundle bundleWithPath:frameworkBundlePath];
     });
     return frameworkBundle;
